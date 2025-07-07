@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+      <style>
+            *{
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+                  font-family: 'poppins,sans-serif;';
+            }
+      body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("4.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+      }
+      .Calculator{
+              border: 3px solid black;
+              padding: 10px;
+              border-radius: 10px;
+              background: transparent;
+              box-shadow: 5px 10px  black;
+             margin-right: 40%;
+      }
+      input{
+            width: 275px;
+            border: none;
+            padding: 25px;
+            margin: 10px;
+            background: transparent;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: right;
+            cursor: pointer;
+      }
+      input::placeholder{
+            color: white;
+      }
+      button{
+            border: none;
+            width: 50px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            justify-content: center;
+            align-content: center;
+            background-color: black;
+            color:white;
+            font-weight: bold;
+      }
+       .btn{
+            background-color: orangered;
+       }
+       .operator{
+            color:red;
+            font-weight: 400px;
+       }
+      </style>
+</head>
+<body>
+    <div class="Calculator">
+      <input type="text" placeholder="0" id="display">
+        <div>
+              <button class="operator" onclick="clearData()">AC</button>
+              <button class="operator" onclick="deleteData()">DEL</button>
+              <button class="operator" onclick="addToDisplay('%')">%</button>
+              <button class="operator" onclick="addToDisplay('/')">/</button>
+        </div>
+
+        <div>
+              <button onclick="addToDisplay(7)">7</button>
+              <button onclick="addToDisplay(8)">8</button>
+              <button onclick="addToDisplay(9)">9</button>
+              <button class="operator" onclick="addToDisplay('*')">*</button>
+        </div>
+
+        <div>
+              <button onclick="addToDisplay(4)">4</button>
+              <button onclick="addToDisplay(5)">5</button>
+              <button onclick="addToDisplay(6)">6</button>
+              <button class="operator" onclick="addToDisplay('-')">-</button>
+        </div>
+
+        <div>
+              <button onclick="addToDisplay(1)">1</button>
+              <button onclick="addToDisplay(2)">2</button>
+              <button onclick="addToDisplay(3)">3</button>
+              <button class="operator" onclick="addToDisplay('+')">+</button>
+        </div>
+
+        <div>
+              <button onclick="addToDisplay(00)">00</button>
+              <button onclick="addToDisplay(0)">0</button>
+              <button class="operator" onclick="addToDisplay('.')">.</button>
+              <button class="btn" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+     <script src="fam2.js"></script>
+</body>
+</html>
